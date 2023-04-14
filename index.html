@@ -30,7 +30,7 @@
       function sendRequest() {
         const key = "Hercules Computers";
         const value = "65";
-        const url = `http://httpbin.org/get?key=${encodeURIComponent(key)}&value=${encodeURIComponent(value)}`; // Replace with your API endpoint and query string parameters
+        const url = `https://httpbin.org/get?key=${encodeURIComponent(key)}&value=${encodeURIComponent(value)}`; // Replace with your API endpoint and query string parameters
         const xhr = new XMLHttpRequest();
         xhr.open("GET", url);
         xhr.onload = function() {
