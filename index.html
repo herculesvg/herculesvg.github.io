@@ -7,7 +7,7 @@
 	<h1>Welcome to the Website!</h1>
 	<p>This my homepage.</p>
 	<p>I am figuring out how to create a website as I have never done this before! :)</p>
-	<p>Testing to see if this is showing the latest site for Hercules Computers at R60.</p>
+	<p>Testing to see if this is showing the latest site for Hercules Computers at R 65.</p>
 </body>
 </html>
 
@@ -15,6 +15,32 @@
   window.dataLayer = window.dataLayer || [];
   dataLayer.push({
     'productName': 'Hercules Computers',
-    'productPrice': R60
+    'productPrice': 65
   });
 </script>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button to send GET API request with query string parameters</title>
+  </head>
+  <body>
+    <button onclick="sendRequest()">Send GET request</button>
+    <script>
+      function sendRequest() {
+        const key = "Hercules Computers";
+        const value = "65";
+        const url = `http://httpbin.org/get?key=${encodeURIComponent(key)}&value=${encodeURIComponent(value)}`; // Replace with your API endpoint and query string parameters
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        xhr.onload = function() {
+          if (xhr.status === 200) {
+            console.log(xhr.responseText); // Handle the API response here
+          }
+        };
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>
+
